@@ -25,17 +25,10 @@ states = {
 
 # Default paths
 defaults = {
-<<<<<<< HEAD
-    "NewStartPoint": "~//Desktop//galaxy-pro//csvs//galaxy.csv",
-    "mainPath": "~//Desktop//galaxy-pro//csvs//",
-    "mainPathSystems": "~//Desktop//galaxy-pro//csvs//systems//system",
-    "mainPathPlanets": "~//Desktop//galaxy-pro//csvs//systems//planets//system",
-=======
     "NewStartPoint": ".//csvs//galaxy.csv",
     "mainPath": ".//csvs//",
     "mainPathSystems": ".//csvs//systems//system",
     "mainPathPlanets": ".//csvs//systems//planets//system",
->>>>>>> master
     "LastEndingPoint": ""
 }
 
@@ -109,12 +102,7 @@ def compact(num: str, typ: int):
         states["CurrentSystem"] = new_num
     elif typ >= 2:  # Condition where player is choosing planets
         typ = 2
-<<<<<<< HEAD
-        df = pd.read_csv(f""""{defaults['mainPathPlanets']}{states['CurrentGalaxy']}//planets{states['CurrentSystem']}\
-    .csv""")
-=======
         df = pd.read_csv(f"""{defaults['mainPathPlanets']}{states['CurrentGalaxy']}//planets{states['CurrentSystem']}.csv""")
->>>>>>> master
         df_deco(df)
         new_num = input("Choose the planet want to visit or type 0 to go back--> ")
         states['CurrentPlanet'] = new_num
@@ -139,12 +127,7 @@ def visualize():
     :return: A graphical representation of all the planets in chosen galaxy
     """
     # Variable holding the value for galaxy to be visualized
-<<<<<<< HEAD
-    flow = input("""What do you want the visual of the Milky Way galaxy Planets (m/M) or Outer Planets (o/O) or your \
-planets (c/C)?""")
-=======
     flow = input("""What do you want the visual of the Milky Way galaxy Planets (m/M) or Outer Planets (o/O) or your planets (c/C)?""")
->>>>>>> master
     main = {
         "m": 1, "o": 2, "c": 3
     }
@@ -270,11 +253,6 @@ def custom():
             pass
 
     length = len(df)
-<<<<<<< HEAD
-    d = ""
-=======
->>>>>>> master
-
     # Editing database according to the action
     if choice.casefold() == 's':
         if ad.casefold() == "d":
